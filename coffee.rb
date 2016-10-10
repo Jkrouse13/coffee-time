@@ -3,7 +3,7 @@ class Coffee
   attr_accessor :amount,
                 :kind
 
-  def initialize(amount = 1, kind)
+  def initialize(kind, amount = 1)
     self.amount = amount
     self.kind = kind
   end
@@ -14,9 +14,12 @@ class Coffee
 
   def empty?
     self.amount == 0
+    # puts amount
   end
 
-  def self.drink!
-    self.amount - 0.33
+  def drink!
+    self.amount = self.amount - 0.33
+    # puts amount
   end
+
 end

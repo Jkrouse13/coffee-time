@@ -17,13 +17,12 @@ class Human
   end
 
   def buy(kind)
-    self.coffee.to_i + 1
+    self.coffee = (kind)
   end
 
   def drink!
-    self.coffee.to_i - 0.33
-    self.alertness.to_i + 0.3
-    # Coffee.drink!
+    self.alertness += 0.33
+    self.coffee.drink!
   end
 
 end
