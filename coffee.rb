@@ -13,7 +13,7 @@ class Coffee
   end
 
   def empty?
-    self.amount == 0
+    self.amount <= 0.01
     # puts amount
   end
 

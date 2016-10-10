@@ -17,7 +17,7 @@ class Human
   end
 
   def buy(kind)
-    self.coffee = (kind)
+    self.coffee =(kind)
   end
 
   def drink!
