@@ -21,7 +21,11 @@ class Human
   end
 
   def drink!
-    self.alertness += 0.33
+    if self.coffee.class == Espresso
+      self.alertness += 0.4
+    else
+      self.alertness += 0.33
+  end
     self.coffee.drink!
   end
 
