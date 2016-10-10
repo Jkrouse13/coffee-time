@@ -3,6 +3,7 @@ require 'minitest/autorun'
 require './human'
 require './coffee'
 require './espresso'
+require './tea'
 
 class CaffeineTest < MiniTest::Test
   def test_humans_tend_to_be_sleepy
@@ -46,5 +47,15 @@ class CaffeineTest < MiniTest::Test
 
     assert jim.alertness == 0.4
     assert sse.empty?
+  end
+
+  def test_tea_is_weaker
+    jon = Human.new "Jon"
+    gt = Tea.new "Green Tea"
+    jon.buy gt
+    4.times {jon.drink!}
+
+    assert jon.alertness == 1
+    refute gt.empty?
   end
 end

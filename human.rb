@@ -23,8 +23,12 @@ class Human
   def drink!
     if self.coffee.class == Espresso
       self.alertness += 0.4
-    else
+    elsif self.coffee.class == Coffee
       self.alertness += 0.33
+    elsif self.coffee.class == Tea
+      self.alertness += 0.25
+    else
+      self.alertness += 0
   end
     self.coffee.drink!
   end
