@@ -12,8 +12,18 @@ class Human
     self.coffee.to_i > 0
   end
 
-  def needs_coffee
+  def needs_coffee?
     self.coffee.to_i == 0
+  end
+
+  def buy(kind)
+    self.coffee.to_i + 1
+  end
+
+  def drink!
+    self.coffee.to_i - 0.33
+    self.alertness.to_i + 0.3
+    # Coffee.drink!
   end
 
 end
